@@ -20,4 +20,4 @@ In the following sections I'm describing implementation of the project in detail
 # 'cmd' package
   In this package I have main.go, the starting point of the application, I try to keep it as simple as possible.
 # 'server.go'
-  Creating and setting of the http server.
+  Creation and setting of the http server.
