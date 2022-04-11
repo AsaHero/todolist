@@ -6,6 +6,7 @@ Entities:
   1. User
   2. List
   3. Item
+  
 Busines Logic:
   1. Sign In/Sign Up
   2. Add/Delete list
