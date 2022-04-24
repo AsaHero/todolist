@@ -1,0 +1,8 @@
+port: ":8080"
+
+db:
+  port: "5000"
+  host: "localhost"
+  username: "root"
+  dbname: "todolist"
+  sslmode: "disabled"

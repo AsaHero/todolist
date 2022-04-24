@@ -1,0 +1,9 @@
+DROP TABLE UsersList;
+
+DROP TABLE ItemList;
+
+DROP TABLE Users;
+
+DROP TABLE ToDoList;
+
+DROP TABLE ToDoItem;
