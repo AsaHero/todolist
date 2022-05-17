@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/asad/go/src/github.com/AsaHero/todolist'
+sudo docker exec -it mysql-server mysql -pTashkent2001
+make: Leaving directory '/home/asad/go/src/github.com/AsaHero/todolist'
+ 

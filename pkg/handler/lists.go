@@ -10,7 +10,7 @@ func (h* Handler) getListById(c *gin.Context) {
 
 }
 
-func (h *Handler) creatList(c *gin.Context) {
+func (h *Handler) createList(c *gin.Context) {
 
 }
 

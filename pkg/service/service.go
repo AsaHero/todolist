@@ -1,16 +1,20 @@
 package service
 
-import "github.com/AsaHero/todolist/pkg/repository"
+import (
+	"github.com/AsaHero/todolist/db/models"
+	"github.com/AsaHero/todolist/pkg/repository"
+)
 
-type Authorization struct {
+type Authorization interface {
+	CreateAccount(user models.Users) (int, error)
+	GenerateToken(username, password string) (string, error)
+}
+
+type ToDoList interface {
 
 }
 
-type ToDoList struct {
-
-}
-
-type ToDoItem struct {
+type ToDoItem interface {
 
 }
 
@@ -21,5 +25,7 @@ type Service struct {
 }
 
 func NewService(repo *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authorization: NewAuthService(repo.Authorization),
+	}
 }

@@ -1,0 +1,1 @@
+{"buildTargets":["connectdb","migratedown","migrateup"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

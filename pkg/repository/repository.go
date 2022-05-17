@@ -1,16 +1,21 @@
 package repository
 
-import "database/sql"
+import (
+	"database/sql"
 
-type Authorization struct {
+	"github.com/AsaHero/todolist/db/models"
+)
+
+type Authorization interface {
+	CreateAccount(user models.Users) (int, error)
+	GetUser(username, password string) (models.Users, error)
+}
+
+type ToDoList interface {
 
 }
 
-type ToDoList struct {
-
-}
-
-type ToDoItem struct {
+type ToDoItem interface {
 
 }
 
@@ -21,5 +26,7 @@ type Repository struct {
 }
 
 func NewRepository(db *sql.DB) *Repository {
-	return &Repository{}
+	return &Repository{
+		Authorization: NewAuthMysql(db),
+	}
 }

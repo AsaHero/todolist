@@ -7,6 +7,15 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+const (
+	userTable = "Users"
+	todolistTable = "ToDoList"
+	todoItemTable = "ToDoItem"
+	userslistTable = "UsersList"
+	itemlistTable = "ItemList"
+)
+
+
 type Config struct {
 	Port string
 	Host string

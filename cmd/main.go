@@ -21,6 +21,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error on reading .env file: %s\n", err.Error())
 	}
+	
 	db, err := repository.NewMysqlDB(repository.Config{
 		Port:     viper.GetString("db.port"),
 		Host:     viper.GetString("db.host"),
