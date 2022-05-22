@@ -2,7 +2,7 @@ package service
 
 import (
 	"crypto/sha1"
-	"strconv"
+	"errors"
 	"time"
 
 	"github.com/AsaHero/todolist/db/models"
@@ -20,6 +20,11 @@ type AuthService struct {
 	repo repository.Authorization
 }
 
+type tokenClaims struct {
+	jwt.StandardClaims
+	UserID int `json:"user_id"`
+}
+
 func NewAuthService(repo repository.Authorization) *AuthService {
 	return &AuthService{repo: repo}
 }
@@ -34,14 +39,37 @@ func (s *AuthService) GenerateToken(username, password string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.StandardClaims{
-		ExpiresAt: time.Now().Add(tokenTTL).Unix(),
-		IssuedAt:  time.Now().Unix(),
-		Id: strconv.FormatInt(int64(user.Id), 10),
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, &tokenClaims{
+		jwt.StandardClaims{
+			ExpiresAt: time.Now().Add(tokenTTL).Unix(),
+			IssuedAt:  time.Now().Unix(),
+		},
+		int(user.Id),
 	})
 
 	return token.SignedString([]byte(secretKey))
 
+}
+
+func (s *AuthService) ParseToken(accessToken string) (int, error) {
+	token, err := jwt.ParseWithClaims(accessToken, &tokenClaims{}, func(t *jwt.Token) (interface{}, error) {
+		if _, ok := t.Method.(*jwt.SigningMethodHMAC); !ok {
+			return nil, errors.New("invalid signing method")
+		}
+
+		return []byte(secretKey), nil
+	})
+	if err != nil {
+		return 0, err
+	}
+
+	claims, ok := token.Claims.(*tokenClaims)
+
+	if !ok {
+		return 0, errors.New("token claims not matching")
+	}
+
+	return claims.UserID, nil
 }
 
 func (s *AuthService) generatePasswordHash(password string) string {

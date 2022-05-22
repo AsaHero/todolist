@@ -1,7 +1,11 @@
 package main
 
 import (
+	"context"
 	"log"
+	"os"
+	"os/signal"
+	"syscall"
 
 	"github.com/AsaHero/todolist"
 	"github.com/AsaHero/todolist/goenv"
@@ -39,10 +43,27 @@ func main() {
 	handler := handler.NewHandler(service)
 
 	server := new(todolist.Server)
-	if err := server.Run(viper.GetString("port"), handler.InitRouter()); err != nil {
-		log.Fatalf("error on runnig the server - %s", err.Error())
+	go func ()  {
+		if err := server.Run(viper.GetString("port"), handler.InitRouter()); err != nil {
+			log.Fatalf("error on runnig the server - %s", err.Error())
+		}
+	}()
+	log.Println("ToDoApp Server started")
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGTERM, syscall.SIGINT)
+	<-quit
+
+	log.Println("ToDoApp Server Shutting Down")
+	if err := server.Shutdown(context.Background()); err != nil {
+		log.Fatalf("error occured on ToDoApp server shutting down: %s", err.Error())
+	}  
+	if err := db.Close(); err != nil {
+		log.Fatalf("error occured on closing db connection")
 	}
-}
+
+}			
+
+
 
 func initViper() error {
 	viper.AddConfigPath("config")

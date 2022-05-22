@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Mon May 16 21:26:15 2022
+# Make data base, printed on Mon May 23 00:28:43 2022
 
 # Variables
 
@@ -30,7 +29,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 UUID = 72182f2b-a2a5-4056-ba0c-3a3f85d1d914
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f0a2834a-febd-4f3d-9e6f-5e0b15cc64dc.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f8af804d-0455-4e3c-bac4-f491970cf03d.sock
 # environment
 LC_NAME = uz_UZ.UTF-8
 # environment
@@ -52,7 +51,7 @@ GOPATH = /home/asad/go
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -72,11 +71,11 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/asad/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/asad/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.WB79L1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.T1SMM1
 # default
 .LOADED := 
 # default
@@ -114,7 +113,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 3424
+VSCODE_PID = 8292
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -122,7 +121,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/asa:@/tmp/.ICE-unix/2326,unix/asa:/tmp/.ICE-unix/2326
+SESSION_MANAGER = local/asa:@/tmp/.ICE-unix/2825,unix/asa:/tmp/.ICE-unix/2825
 # automatic
 *F = $(notdir $*)
 # environment
@@ -168,11 +167,11 @@ SNAP_USER_COMMON = /home/asad/snap/code/common
 # environment
 LC_TIME = uz_UZ.UTF-8
 # environment
-SNAP = /snap/code/96
+SNAP = /snap/code/97
 # environment
-INVOCATION_ID = b482bc67d4fb431cb05d634a3ddd5f32
+INVOCATION_ID = d1042c7d619e488888310ea5f98b5f1a
 # environment
-SNAP_REVISION = 96
+SNAP_REVISION = 97
 # environment
 SNAP_REAL_HOME = /home/asad
 # environment
@@ -208,7 +207,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := connectdb
 # environment
-SYSTEMD_EXEC_PID = 2349
+SYSTEMD_EXEC_PID = 2857
 # environment
 DISPLAY = :0
 # environment
@@ -220,17 +219,17 @@ MAKE_VERSION := 4.3
 # environment
 DISABLE_WAYLAND = 1
 # environment
-SNAP_DATA = /var/snap/code/96
+SNAP_DATA = /var/snap/code/97
 # environment
 SNAP_CONTEXT = btATVWgSmPIJ5877Br9s6mJ_SgGIKIUip-oYSNPvcGYaPqpIEimj
 # environment
-MANAGERPID = 2251
+MANAGERPID = 2729
 # environment
 LC_MEASUREMENT = uz_UZ.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3380
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8254
 # environment
-_ = /snap/code/96/usr/share/code/code
+_ = /snap/code/97/usr/share/code/code
 # environment
 LC_PAPER = uz_UZ.UTF-8
 # environment
@@ -238,7 +237,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/asad/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:36597
+JOURNAL_STREAM = 8:34695
 # environment
 GOMODCACHE = /home/asad/go/pkg/mod
 # environment
@@ -254,11 +253,11 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-fedac8cc-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-fedac8cc-1.67.2-main.sock
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 # environment
 PAPERSIZE = a4
 # environment
@@ -268,7 +267,7 @@ GOPROXY = https://proxy.golang.org,direct
 # automatic
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = da15b6fd
+SNAP_VERSION = c3511e6c
 # default
 SUFFIXES := 
 # environment
@@ -281,13 +280,13 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+ 
 # environment
-SNAP_USER_DATA = /home/asad/snap/code/96
+SNAP_USER_DATA = /home/asad/snap/code/97
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = ubuntu
- 
 # environment
 LC_IDENTIFICATION = uz_UZ.UTF-8
 # environment
@@ -367,6 +366,6 @@ all:
 # strcache performance: lookups = 32 / hit rate = 21%
 # hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Mon May 16 21:26:15 2022
+# Finished Make data base on Mon May 23 00:28:43 2022
 
  

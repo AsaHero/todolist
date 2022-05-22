@@ -7,7 +7,7 @@ require (
 	github.com/spf13/viper v1.11.0
 )
 
-require github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
+require github.com/dgrijalva/jwt-go v3.2.0+incompatible
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect

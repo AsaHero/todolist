@@ -14,10 +14,10 @@ Busines Logic:
   4. See certain/whole list
   5. See certain/whole item
 
+What topics were covered in this project:
 
-In the following sections I'm describing implementation of the project in detail, such as packages, config, and other files.
-
-# 'cmd' package
-  In this package I have main.go, the starting point of the application, I try to keep it as simple as possible.
-# 'server.go'
-  Creation and setting of the http server.
+- impelemtation of REST API
+- working with database MySQL, running it on docker, and create database migrations
+- complex SQL queries
+- clean architecture
+- logic of jwt registration and authentication  

@@ -40,7 +40,6 @@ func (r *AuthMysql) CreateAccount(user models.Users) (int, error) {
 
 func (r *AuthMysql) GetUser(username, password string) (models.Users, error) {
 	var user models.Users
-	
 	query := fmt.Sprintf("SELECT * FROM %s WHERE username=? AND password_hash=HEX(?)", userTable)
 	statement, err := r.db.Prepare(query)
 	if err != nil {
